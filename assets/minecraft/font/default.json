@@ -1,0 +1,65 @@
+{
+    "providers": [
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/sorrow.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE001"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/sharpshooter.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE002"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/ceaseless.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE003"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/torrent.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE004"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/wrath.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE005"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/eternal_binding.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE006"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/slayer.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE007"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticlegacy:gui2/enchantments/nemesis.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE008"]
+        },
+        
+        { "type": "bitmap",
+            "file": "enigmaticaddons:gui2/enchantments/redemption.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE009"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticaddons:gui2/enchantments/frost_shattering.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE010"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticaddons:gui2/enchantments/frost_protection.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE011"]
+        },
+        { "type": "bitmap",
+            "file": "enigmaticaddons:gui2/enchantments/frost_aspect.png",
+            "ascent": 8, "height": 10,
+            "chars": ["\uE012"]
+        }
+    ]
+}

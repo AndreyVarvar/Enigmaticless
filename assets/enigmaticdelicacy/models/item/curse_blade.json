@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "enigmaticdelicacy:item/curse_blade"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "active": 1
+      },
+      "model": "enigmaticdelicacy:item/curse_blade_active"
+    }
+  ]
+}

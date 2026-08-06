@@ -1,0 +1,11 @@
+{
+  "parent": "enigmaticdelicacy:block/balanced_stewed_soup_block_stage0",
+  "gui_light": "side",
+  "display": {
+    "gui": {
+      "rotation": [30, 225, 0],
+      "translation": [0, 0, 0],
+      "scale": [1.25, 1.25, 1.25]
+    }
+  }
+}
