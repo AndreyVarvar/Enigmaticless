@@ -30,7 +30,6 @@ while getopts "hvbB:d:" opt; do
 done
 
 shift $((OPTIND - 1))
-echo $directory
 directory="${directory%/}"
 
 if $show_help; then
@@ -42,9 +41,9 @@ if $show_help; then
   echo ""
   echo "DESCRIPTION"
   echo "The build utility parses files in the location of invocation. If no option was passed, the script will compile all the assets and bump the version that can be specified as na argument similar to the ones for -b"
-  echo "  -h, --help                      shows this help menu"
-  echo "  -v, --version                   shows current version"
-  echo "  -b, --bump                      compiles and bumps patch version"
+  echo "  -h                              shows this help menu"
+  echo "  -v                              shows current version"
+  echo "  -b                              compiles and bumps patch version"
   echo "  -B [major|minor|patch]          compiles and bumps version passed as an argument"
   echo "  -d [path/to/folder]             if specified, changes the export directory of the zip-file"
   echo ""
