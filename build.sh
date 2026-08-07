@@ -36,15 +36,12 @@ if $show_help; then
   echo "NAME"
   echo "  build - compile all the assets in this directory into a single zip-file texture-pack"
   echo ""
-  echo "SYNPOPSIS"
-  echo "  build [-hvb] [...]"
-  echo ""
   echo "DESCRIPTION"
-  echo "The build utility parses files in the location of invocation. If no option was passed, the script will compile all the assets and bump the version that can be specified as na argument similar to the ones for -b"
+  echo "The build utility parses files in the location of invocation. If no option was passed, the script will compile all the assets"
   echo "  -h                              shows this help menu"
   echo "  -v                              shows current version"
-  echo "  -b                              compiles and bumps patch version"
   echo "  -B [major|minor|patch]          compiles and bumps version passed as an argument"
+  echo "  -b                              shorthand for '-B patch'"
   echo "  -d [path/to/folder]             if specified, changes the export directory of the zip-file"
   echo ""
   echo "EXIT STATUS"
@@ -65,6 +62,7 @@ if $show_help; then
 fi
 
 VERSION=$(cat pack-version.txt)
+VERSION_PREFIX="${VERSION%-*}"
 
 if $show_version; then
   echo "Current version: $VERSION"
@@ -72,10 +70,10 @@ if $show_version; then
 fi
 
 if $bump_version; then
-  OLDVERSIONSUFFIX="${VERSION##*-}"
+  OLD_VERSION_SUFFIX="${VERSION##*-}"
 
   local -a V
-  V=(${(s:.:)OLDVERSIONSUFFIX})
+  V=(${(s:.:)OLD_VERSION_SUFFIX})
 
   case "$bump_type" in
   major)
@@ -96,17 +94,18 @@ if $bump_version; then
     ;;
   esac
 
-  VERSIONPREFIX="${VERSION%-*}"
-  NEWVERSIONSUFFIX="${(j:.:)V}"
+  NEW_VERSION_SUFFIX="${(j:.:)V}"
 
-  echo "Updated from $OLDVERSIONSUFFIX to $NEWVERSIONSUFFIX"
-  echo "$VERSIONPREFIX-$NEWVERSIONSUFFIX" >pack-version.txt
-  VERSION="$VERSIONPREFIX-$NEWVERSIONSUFFIX"
+  echo "Updated from $OLD_VERSION_SUFFIX to $NEW_VERSION_SUFFIX"
+  VERSION="$VERSION_PREFIX-$NEW_VERSION_SUFFIX"
+  echo "$VERSION" >pack-version.txt
 fi
 
+PROJECT_NAME="Enigmaticless"
+
 # clear the build directory first
-rm -rf "$directory/Enigmaticless-1.20.1-*.zip"
+rm -rf "$directory/$PROJECT_NAME-$VERSION_PREFIX-*.zip"
 # the compilation part
-NAME="Enigmaticless-$VERSION.zip"
+NAME="$PROJECT_NAME-$VERSION.zip"
 zip -q -r "$directory/$NAME" LICENSE.md README.md pack.mcmeta pack.png assets/ -x "*.aseprite"
 echo "Successfully compiled $NAME under the $directory/ directory"
