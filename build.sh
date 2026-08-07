@@ -7,7 +7,7 @@ bump_version=false
 bump_type="patch"
 directory="./build/"
 
-while getopts "hvbd:" opt; do
+while getopts "hvbB:d:" opt; do
   case "$opt" in
   h) show_help=true ;;
   v) show_version=true ;;
@@ -19,6 +19,9 @@ while getopts "hvbd:" opt; do
     bump_version=true
     bump_type="$OPTARG"
     ;;
+  d)
+    directory="$OPTARG"
+    ;;
   *)
     echo "Invalid flag passed"
     exit 1
@@ -27,6 +30,8 @@ while getopts "hvbd:" opt; do
 done
 
 shift $((OPTIND - 1))
+echo $directory
+directory="${directory%/}"
 
 if $show_help; then
   echo "NAME"
@@ -41,6 +46,7 @@ if $show_help; then
   echo "  -v, --version                   shows current version"
   echo "  -b, --bump                      compiles and bumps patch version"
   echo "  -B [major|minor|patch]          compiles and bumps version passed as an argument"
+  echo "  -d [path/to/folder]             if specified, changes the export directory of the zip-file"
   echo ""
   echo "EXIT STATUS"
   echo "The build utility exits 0 on success, and 1 if an error occurs."
@@ -100,8 +106,8 @@ if $bump_version; then
 fi
 
 # clear the build directory first
-rm -rf ./build/*.zip
+rm -rf "$directory/Enigmaticless-1.20.1-*.zip"
 # the compilation part
 NAME="Enigmaticless-$VERSION.zip"
-zip -q -r "build/$NAME" LICENSE.md README.md pack.mcmeta pack.png assets/ -x "*.aseprite"
-echo "Successfully compiled $NAME under the build/ directory"
+zip -q -r "$directory/$NAME" LICENSE.md README.md pack.mcmeta pack.png assets/ -x "*.aseprite"
+echo "Successfully compiled $NAME under the $directory/ directory"
