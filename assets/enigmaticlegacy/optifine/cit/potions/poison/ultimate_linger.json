@@ -1,7 +1,0 @@
-{
-    "parent": "enigmaticlegacy:item/ultimate_potion",
-    "textures": {
-      "layer1": "enigmaticlegacy:item/potions/ultimate_poison",
-      "layer2": "enigmaticlegacy:item/potions/ultimate_cap_linger"
-    }
-  }
