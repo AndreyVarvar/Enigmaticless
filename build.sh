@@ -40,7 +40,7 @@ if $show_help; then
   echo "The build utility parses files in the location of invocation. If no option was passed, the script will compile all the assets"
   echo "  -h                              shows this help menu"
   echo "  -v                              shows current version"
-  echo "  -B [major|minor|patch]          compiles and bumps version passed as an argument"
+  echo "  -B [major|minor|patch]          bumps version with criteria passed as an argument"
   echo "  -p                              shorthand for '-B patch'"
   echo "  -d [path/to/folder]             if specified, changes the export directory of the zip-file"
   echo ""
@@ -99,6 +99,8 @@ if $bump_version; then
   echo "Updated from $OLD_VERSION_SUFFIX to $NEW_VERSION_SUFFIX"
   VERSION="$VERSION_PREFIX-$NEW_VERSION_SUFFIX"
   echo "$VERSION" >pack-version.txt
+
+  exit 0
 fi
 
 PROJECT_NAME="Enigmaticless"
