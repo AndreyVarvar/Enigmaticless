@@ -7,11 +7,11 @@ bump_version=false
 bump_type="patch"
 directory="./build/"
 
-while getopts "hvbB:d:" opt; do
+while getopts "hvpB:d:" opt; do
   case "$opt" in
   h) show_help=true ;;
   v) show_version=true ;;
-  b)
+  p)
     bump_version=true
     bump_type="patch"
     ;;
@@ -41,7 +41,7 @@ if $show_help; then
   echo "  -h                              shows this help menu"
   echo "  -v                              shows current version"
   echo "  -B [major|minor|patch]          compiles and bumps version passed as an argument"
-  echo "  -b                              shorthand for '-B patch'"
+  echo "  -p                              shorthand for '-B patch'"
   echo "  -d [path/to/folder]             if specified, changes the export directory of the zip-file"
   echo ""
   echo "EXIT STATUS"
