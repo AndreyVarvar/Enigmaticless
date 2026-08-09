@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enigmaticdelicacy:block/astral_slab"
+    },
+    "type=double": {
+      "model": "enigmaticdelicacy:block/astral_planks"
+    },
+    "type=top": {
+      "model": "enigmaticdelicacy:block/astral_slab_top"
+    }
+  }
+}

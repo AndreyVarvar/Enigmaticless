@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "enigmaticdelicacy:item/glistening_heart"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "off": 1
+      },
+      "model": "enigmaticdelicacy:item/glistening_heart_off"
+    }
+  ]
+}
