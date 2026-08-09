@@ -1,3 +1,6 @@
 {
-  "parent": "enigmaticdelicacy:block/astral_pressure_plate"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enigmaticdelicacy:item/astral_pressure_plate"
+  }
 }
