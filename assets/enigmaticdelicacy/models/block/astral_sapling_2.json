@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross_tall_up",
+  "textures": {
+    "cross": "enigmaticdelicacy:block/astral_sapling_2"
+  }
+}

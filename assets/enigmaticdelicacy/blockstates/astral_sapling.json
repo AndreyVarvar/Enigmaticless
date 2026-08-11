@@ -1,7 +1,6 @@
 {
-  "variants": {
-    "": {
-      "model": "enigmaticdelicacy:block/astral_sapling"
+    "variants": {
+        "stage=0": { "model": "enigmaticdelicacy:block/astral_sapling" },
+        "stage=1": { "model": "enigmaticdelicacy:block/astral_sapling_2" }
     }
-  }
 }
