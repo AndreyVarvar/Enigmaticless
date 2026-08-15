@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/cross_tall_up",
+  "render_type": "cutout",
   "textures": {
     "cross": "enigmaticdelicacy:block/astral_sapling_2"
   }

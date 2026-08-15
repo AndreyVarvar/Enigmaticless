@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"bottom": "farmersdelight:block/pie_bottom",
+		"bottom": "enigmaticdelicacy:block/pie_bottom",
 		"side": "enigmaticdelicacy:block/pie_side",
 		"particle": "enigmaticdelicacy:block/sticky_pie_top",
 		"top": "enigmaticdelicacy:block/sticky_pie_top"
