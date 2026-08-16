@@ -109,5 +109,5 @@ PROJECT_NAME="Enigmaticless"
 rm -rf "$directory/$PROJECT_NAME-$VERSION_PREFIX-*.zip"
 # the compilation part
 NAME="$PROJECT_NAME-$VERSION.zip"
-zip -q -r "$directory/$NAME" LICENSE.md README.md pack.mcmeta pack.png assets/ -x "*.aseprite" ".DS_Store"
+zip -q -r "$directory/$NAME" LICENSE.md README.md pack.mcmeta pack.png assets/ -x "*.aseprite" -x "*.DS_Store"
 echo "Successfully compiled $NAME under the $directory/ directory"
